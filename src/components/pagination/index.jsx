@@ -18,4 +18,12 @@ function Pagination({ currentPage, totalPages = 10, onPageChange }) {
           >
             Prev
           </button>
-          )
+          {generateNoOfPages().map((pageNo) => (
+            <button
+              className={`pagination-btn ${currentPage === pageNo ? 'active' :''}`}
+              key={pageNo}
+              onClick={() => onPageChange(pageNo)}
+            >
+              {pageNo}
+            </button>
+          ))}
