@@ -8,3 +8,14 @@ function Pagination({ currentPage, totalPages = 10, onPageChange }) {
   
       return pages;
     }
+
+    return (
+        <div className="pagination">
+          <button
+            onClick={() => onPageChange(currentPage - 1)}
+            className="pagination-btn"
+            disabled={currentPage === 1}
+          >
+            Prev
+          </button>
+          )
