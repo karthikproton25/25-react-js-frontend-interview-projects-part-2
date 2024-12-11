@@ -4,3 +4,35 @@ function CountdownTimer({ initialTime, onTimeFinish }) {
   const [time, setTime] = useState(initialTime);
   const [isRunning, setIsRunning] = useState(true);
   const intervalReference = useRef();
+  
+  useEffect(() => {
+    if (isRunning) {
+      //internal
+      intervalReference.current = setInterval(() => {
+        setTime((prevTime) => {
+          if (prevTime === 0) {
+            clearInterval(intervalReference.current);
+            setIsRunning(false);
+
+            if (onTimeFinish) {
+              onTimeFinish();
+            }
+
+            return 0;
+          }
+
+          return prevTime - 1;
+        });
+      }, 1000);
+    } else {
+      clearInterval(intervalReference.current);
+    }
+
+    return () => {
+      clearInterval(intervalReference.current);
+    };
+  }, [isRunning, onTimeFinish]);
+
+  function handlePauseAndResume() {
+    setIsRunning((prevIsRunning) => !prevIsRunning);
+  }

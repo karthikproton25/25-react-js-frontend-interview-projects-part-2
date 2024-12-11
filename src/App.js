@@ -1,4 +1,6 @@
-import logo from "./logo.svg";
+import DigitalClock from "./components/2. digital-clock";
+import PaginationTest from "./components/1. pagination/test";
+import CountdownTimerTest from "./components/3. countdown-timer/test";
 import "./App.css";
 
 function App() {
@@ -6,6 +8,8 @@ function App() {
     <div className="App">
       <h1 className="title">25 React JS Interview Projects : Part 2</h1>
       <PaginationTest />
+      <DigitalClock />
+      <CountdownTimerTest />
     </div>
   );
 }
