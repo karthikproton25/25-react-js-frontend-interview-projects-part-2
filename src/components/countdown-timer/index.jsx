@@ -4,10 +4,9 @@ function CountdownTimer({ initialTime, onTimeFinish }) {
   const [time, setTime] = useState(initialTime);
   const [isRunning, setIsRunning] = useState(true);
   const intervalReference = useRef();
-  
+
   useEffect(() => {
     if (isRunning) {
-    
       intervalReference.current = setInterval(() => {
         setTime((prevTime) => {
           if (prevTime === 0) {
@@ -40,7 +39,7 @@ function CountdownTimer({ initialTime, onTimeFinish }) {
   function handleReset() {
     clearInterval(intervalReference.current);
     setTime(initialTime);
-    setIsRunning(false)
+    setIsRunning(false);
   }
 
   function handleStart() {
@@ -49,3 +48,21 @@ function CountdownTimer({ initialTime, onTimeFinish }) {
 
   const minutes = Math.floor(time / 60);
   const seconds = time % 60;
+
+  return (
+    <div className="timer">
+      <p>
+        {String(minutes).padStart(2, "0")}:{String(seconds).padStart(2, "0")}
+      </p>
+      <div className="timer-buttons">
+        <button onClick={handlePauseAndResume}>
+          {isRunning ? "Pause" : "Resume"}
+        </button>
+        <button onClick={handleReset}>Reset</button>
+        <button onClick={handleStart}>Start</button>
+      </div>
+    </div>
+  );
+}
+
+export default CountdownTimer;
