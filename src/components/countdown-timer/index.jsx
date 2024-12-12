@@ -7,7 +7,7 @@ function CountdownTimer({ initialTime, onTimeFinish }) {
   
   useEffect(() => {
     if (isRunning) {
-      //internal
+    
       intervalReference.current = setInterval(() => {
         setTime((prevTime) => {
           if (prevTime === 0) {
@@ -33,6 +33,4 @@ function CountdownTimer({ initialTime, onTimeFinish }) {
     };
   }, [isRunning, onTimeFinish]);
 
-  function handlePauseAndResume() {
-    setIsRunning((prevIsRunning) => !prevIsRunning);
-  }
+ 
