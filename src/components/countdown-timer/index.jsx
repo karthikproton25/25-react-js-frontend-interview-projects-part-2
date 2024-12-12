@@ -33,4 +33,19 @@ function CountdownTimer({ initialTime, onTimeFinish }) {
     };
   }, [isRunning, onTimeFinish]);
 
- 
+  function handlePauseAndResume() {
+    setIsRunning((prevIsRunning) => !prevIsRunning);
+  }
+
+  function handleReset() {
+    clearInterval(intervalReference.current);
+    setTime(initialTime);
+    setIsRunning(false)
+  }
+
+  function handleStart() {
+    setIsRunning(true);
+  }
+
+  const minutes = Math.floor(time / 60);
+  const seconds = time % 60;
