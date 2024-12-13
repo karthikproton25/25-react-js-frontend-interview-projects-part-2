@@ -40,3 +40,4 @@ function StepProgressBar({ steps, activeStep, setActiveStep }) {
     </div>
   );
 }
+export default StepProgressBar;
