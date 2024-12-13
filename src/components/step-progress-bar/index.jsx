@@ -1,5 +1,12 @@
 function StepProgressBar({ steps, activeStep, setActiveStep }) {
-
+    function handlePreviousStep() {
+        setActiveStep((prevStep) => Math.max(prevStep - 1, 0));
+      }
+    
+      function handleNextStep() {
+        setActiveStep((prevStep) => Math.min(prevStep + 1, steps.length - 1));
+      }
+    
     return (
         <div>
           <div className="steps">
