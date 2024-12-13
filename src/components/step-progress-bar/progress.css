@@ -1,0 +1,28 @@
+.steps {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  align-items: center;
+  margin: auto;
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  padding: 10px;
+  margin-top: 20px;
+}
+
+.step {
+  flex-grow: 1;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  background-color: #2196f3;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.step.active {
+  background-color: #4caf50;
+  color: #ffffff;
+}
