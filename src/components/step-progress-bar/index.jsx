@@ -9,4 +9,11 @@ function StepProgressBar({ steps, activeStep, setActiveStep }) {
                     {stepItem}
                   </div>
                 ))
+                <div>
+                <div className="step-buttons-wrapper">
+                    <button>Previous Step</button>
+                    <button>Next Step</button>
+                </div>
+                </div>
+
 }
