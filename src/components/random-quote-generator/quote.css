@@ -16,3 +16,12 @@
   margin-bottom: 10px;
   font-weight: bold;
 }
+
+.refresh-btn {
+  padding: 12px 20px;
+  background-color: #f3f800;
+  font-size: 18px;
+  cursor: pointer;
+  outline: none;
+  font-weight: bold;
+}
