@@ -16,7 +16,7 @@ function App() {
       <CountdownTimerTest />
       <StepProgressBarTest />
       <RandomQuoteGenerator />
-      <Tooltip />
+      <TooltipTest />
     </div>
   );
 }
