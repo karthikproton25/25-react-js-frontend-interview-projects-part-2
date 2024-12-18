@@ -3,6 +3,8 @@ import PaginationTest from "./components/1. pagination/test";
 import CountdownTimerTest from "./components/3. countdown-timer/test";
 import StepProgressBarTest from "./components/4. step-progress-bar/test";
 import RandomQuoteGenerator from "./components/5. random-quote-generator";
+import TooltipTest from "./components/6. Tooltip/test";
+
 import "./App.css";
 
 function App() {
@@ -14,6 +16,7 @@ function App() {
       <CountdownTimerTest />
       <StepProgressBarTest />
       <RandomQuoteGenerator />
+      <Tooltip />
     </div>
   );
 }
