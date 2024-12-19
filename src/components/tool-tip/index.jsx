@@ -1,9 +1,15 @@
-function Tooltip() {
+function Tooltip({ children, content, delay }) {
+  let timeout;
+  const [isVisible, setIsVisible] = useState(false);
+
   return (
-    <div>
-      <h1>Tooltip</h1>
+    <div
+      className="tooltip-container"
+      onMouseEnter={handleShowTooltip}
+      onMouseLeave={handleHideTooltip}
+    >
+      {children}
+      {isVisible ? <div className="tooltip">{content}</div> : null}
     </div>
   );
 }
-
-export default Tooltip;

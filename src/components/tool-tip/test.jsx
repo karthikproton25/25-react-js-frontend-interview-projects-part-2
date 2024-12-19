@@ -1,4 +1,5 @@
 import Tooltip from ".";
+import "./tooltip.css";
 
 function TooltipTest() {
   return (
