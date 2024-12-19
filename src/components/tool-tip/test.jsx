@@ -4,7 +4,11 @@ function TooltipTest() {
   return (
     <div>
       <h1>Tooltip</h1>
-      <Tooltip />
+      <Tooltip
+        delay={500}
+        content={"Tooltip Content"}
+        children={<p>Hover Me</p>}
+      />
     </div>
   );
 }
