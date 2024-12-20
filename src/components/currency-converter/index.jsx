@@ -1,3 +1,6 @@
+import { useEffect, useState } from "react";
+import "./currency.css";
+
 function CurrencyConverter() {
   const [amount, setAmount] = useState(1);
   const [fromCurrency, setFromCurrency] = useState("USD");
@@ -70,3 +73,5 @@ function CurrencyConverter() {
     </div>
   );
 }
+
+export default CurrencyConverter;
