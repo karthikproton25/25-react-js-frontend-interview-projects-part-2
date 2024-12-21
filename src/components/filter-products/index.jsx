@@ -4,10 +4,14 @@ function FilterProducts() {
 
     async function fetchProducts() {
         try {
+            setLoading(true);
+            const apiResponse = await fetch("https://dummyjson.com/products", {
+              method: "GET",
+            });
 
         }
     }
 
 return {
-    
+
 }
