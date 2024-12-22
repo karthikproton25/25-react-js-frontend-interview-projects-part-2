@@ -1,3 +1,6 @@
+import { useEffect, useState } from "react";
+import "./filter.css";
+
 function FilterProducts() {
   const [loading, setLoading] = useState(false);
   const [products, setProducts] = useState([]);
@@ -24,3 +27,5 @@ function FilterProducts() {
 }
 
 return {};
+
+export default FilterProducts;
