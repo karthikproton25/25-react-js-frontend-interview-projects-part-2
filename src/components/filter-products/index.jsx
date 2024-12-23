@@ -26,6 +26,11 @@ function FilterProducts() {
   }
 }
 
+const uniqueCategories =
+products && products.length > 0
+  ? [...new Set(products.map((productItem) => productItem.category))]
+  : [];
+  
 return {};
 
 export default FilterProducts;
