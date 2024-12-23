@@ -10,3 +10,7 @@
   list-style: none;
   margin-top: 50px;
 }
+
+.filter-products-container .list-of-products li {
+  width: 30%;
+}
