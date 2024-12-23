@@ -26,11 +26,28 @@ function FilterProducts() {
   }
 }
 
+useEffect(() => {
+  fetchProducts();
+}, []);
+
+useEffect(() => {
+  const cpyProducts = [...products];
+  setFilteredItems(
+    currentSelectedCategory !== ""
+      ? cpyProducts.filter(
+          (productItem) =>
+            productItem.category.toLowerCase() ===
+            currentSelectedCategory.toLowerCase()
+        )
+      : cpyProducts
+  );
+}, [currentSelectedCategory]);
+
 const uniqueCategories =
-products && products.length > 0
-  ? [...new Set(products.map((productItem) => productItem.category))]
-  : [];
-  
+  products && products.length > 0
+    ? [...new Set(products.map((productItem) => productItem.category))]
+    : [];
+
 return {};
 
 export default FilterProducts;
