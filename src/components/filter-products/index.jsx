@@ -43,6 +43,25 @@ useEffect(() => {
   );
 }, [currentSelectedCategory]);
 
+
+return (
+  <div className="filter-products-container">
+    <h1>Filter Products By Category</h1>
+    <div className="filter-categories-container">
+      {uniqueCategories.map((uniqueCategoryItem) => (
+        <button
+          onClick={() =>
+            setCurrentSelectedCategory(
+              currentSelectedCategory !== "" &&
+                currentSelectedCategory === uniqueCategoryItem
+                ? ""
+                : uniqueCategoryItem
+            )
+          }
+          className={`${
+            currentSelectedCategory === uniqueCategoryItem ? "active" : ""
+          }`}
+
 const uniqueCategories =
   products && products.length > 0
     ? [...new Set(products.map((productItem) => productItem.category))]
