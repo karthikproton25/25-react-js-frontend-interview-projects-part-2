@@ -43,6 +43,15 @@ useEffect(() => {
   );
 }, [currentSelectedCategory]);
 
+const uniqueCategories =
+products && products.length > 0
+  ? [...new Set(products.map((productItem) => productItem.category))]
+  : [];
+
+if (loading) {
+return <h3>Fetching the products ! Please wait</h3>;
+}
+
 
 return (
   <div className="filter-products-container">
