@@ -22,3 +22,11 @@
   gap: 10px;
   margin-top: 20px;
 }
+
+.filter-products-container .filter-categories-container button {
+  padding: 12px 20px;
+  background-color: #f3f800;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+}
