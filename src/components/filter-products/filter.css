@@ -14,3 +14,11 @@
 .filter-products-container .list-of-products li {
   width: 30%;
 }
+
+.filter-products-container .filter-categories-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+}
