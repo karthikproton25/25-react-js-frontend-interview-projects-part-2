@@ -5,6 +5,7 @@ import StepProgressBarTest from "./components/4. step-progress-bar/test";
 import RandomQuoteGenerator from "./components/5. random-quote-generator";
 import TooltipTest from "./components/6. Tooltip/test";
 import CurrencyConverter from "./components/7. currency-converter";
+import FilterProducts from "./components/8. filter-products";
 
 import "./App.css";
 
@@ -19,6 +20,7 @@ function App() {
       <RandomQuoteGenerator />
       <TooltipTest />
       <CurrencyConverter />
+      <FilterProducts />
     </div>
   );
 }
