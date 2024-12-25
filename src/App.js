@@ -6,6 +6,7 @@ import RandomQuoteGenerator from "./components/5. random-quote-generator";
 import TooltipTest from "./components/6. Tooltip/test";
 import CurrencyConverter from "./components/7. currency-converter";
 import FilterProducts from "./components/8. filter-products";
+import TipCalculator from "./components/tip-calculator";
 
 import "./App.css";
 
@@ -21,6 +22,7 @@ function App() {
       <TooltipTest />
       <CurrencyConverter />
       <FilterProducts />
+      <TipCalculator />
     </div>
   );
 }
