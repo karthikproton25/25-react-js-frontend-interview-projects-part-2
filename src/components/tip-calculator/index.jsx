@@ -11,17 +11,29 @@ function TipCalculator() {
       <h1>TipCalculator</h1>
       <div className="input-container">
         <label>Bill Amount:</label>
-        <input type="number" />
+        <input
+          onChange={(event) => setBillAmount(event.target.value)}
+          value={billAmount}
+          type="number"
+        />
       </div>
       <div className="input-container">
         <label>Tip Percentage:</label>
-        <input type="number" />
+        <input
+          onChange={(event) => setTipPercentage(event.target.value)}
+          value={tipPercentage}
+          type="number"
+        />
       </div>
       <div className="input-container">
         <label>Number Of People:</label>
-        <input type="number" />
+        <input
+          onChange={(event) => setSplitCount(event.target.value)}
+          value={splitCount}
+          type="number"
+        />
       </div>
-      <button>Calculate Tip</button>
+      <button onClick={handleCalculteTip}>Calcuate Tip</button>
     </div>
   );
 }
