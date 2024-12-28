@@ -5,6 +5,33 @@ function TipCalculator() {
   const [tipPercentage, setTipPercentage] = useState(10);
   const [splitCount, setSplitCount] = useState(1);
   const [tipAmount, setAmount] = useState(0);
+  const [errorMsg, setErrorMsg] = useState("");
+
+  function handleCalculteTip() {
+    if (
+      !billAmount ||
+      billAmount <= 0 ||
+      !tipPercentage ||
+      tipPercentage <= 0
+    ) {
+      setTipAmount(null);
+      setErrorMsg("Please enter valid values for Bill amount & Tip Percentage");
+      return;
+    }
+
+    const bill = parseFloat(billAmount);
+    const tip = (bill * tipPercentage) / 100;
+    const totalAmount = bill + tip;
+    const tipAmountPerPerson = tip / splitCount;
+    const totalAmountPerPerson = totalAmount / splitCount;
+
+    setTipAmount({
+      totalAmount: totalAmount.toFixed(2),
+      tipPerPerson: tipAmountPerPerson.toFixed(2),
+      totalPerPerson: totalAmountPerPerson.toFixed(2),
+    });
+    setErrorMsg("");
+  }
 
   return (
     <div className="tip-calculator">
