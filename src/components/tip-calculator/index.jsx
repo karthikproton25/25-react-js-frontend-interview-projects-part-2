@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./tip-calculator.css";
 
 function TipCalculator() {
   const [billAmount, setBillAmount] = useState(null);
