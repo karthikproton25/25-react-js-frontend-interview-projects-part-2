@@ -61,6 +61,13 @@ function TipCalculator() {
         />
       </div>
       <button onClick={handleCalculteTip}>Calcuate Tip</button>
+      {tipAmount ? (
+        <div className="tip-result-container">
+          <p>Total Amount : {tipAmount.totalAmount}</p>
+          <p>Tip Per Person : {tipAmount.tipPerPerson}</p>
+          <p>Total Amount Per Person: {tipAmount.totalPerPerson}</p>
+        </div>
+      ) : null}
     </div>
   );
 }
