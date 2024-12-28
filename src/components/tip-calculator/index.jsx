@@ -62,6 +62,7 @@ function TipCalculator() {
         />
       </div>
       <button onClick={handleCalculteTip}>Calcuate Tip</button>
+      {errorMsg ? <p className="error-message">{errorMsg}</p> : null}
       {tipAmount ? (
         <div className="tip-result-container">
           <p>Total Amount : {tipAmount.totalAmount}</p>
