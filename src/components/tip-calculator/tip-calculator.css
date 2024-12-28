@@ -31,3 +31,28 @@
   font-size: 14px;
   outline: none;
 }
+
+.tip-calculator button {
+  padding: 12px 20px;
+  background-color: #f3f800;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-bottom: 30px;
+}
+
+.tip-calculator .tip-result-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.tip-calculator .tip-result-container p,
+.tip-calculator .error-message {
+  font-size: 18px;
+  font-weight: bolder;
+}
+
+.tip-calculator .error-message {
+  margin-bottom: 30px;
+}
