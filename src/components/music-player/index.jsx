@@ -1,3 +1,5 @@
+import { useEffect, useRef, useState } from "react";
+
 const tracks = [
   {
     title: "Track 1",
@@ -12,6 +14,10 @@ const tracks = [
 ];
 
 function MusicPlayer() {
+  const audioRef = useRef(null);
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [currentMusicTrack, SetCurrentMusicTrack] = useState(0);
+  const [trackProgress, setTrackProgress] = useState(0);
   return (
     <div className="music-player">
       <h1>Music Player</h1>
