@@ -38,6 +38,13 @@ function MusicPlayer() {
           }}
         ></div>
       </div>
+      <div className="track-controls">
+        <button onClick={() => handleSkipTrack("backward")}>Backward</button>
+        <button onClick={handlePauseAndPlay}>
+          {isPlaying ? "Pause" : "Play"}
+        </button>
+        <button onClick={() => handleSkipTrack("forward")}>Forward</button>
+      </div>
     </div>
   );
 }
