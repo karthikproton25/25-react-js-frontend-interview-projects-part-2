@@ -18,6 +18,7 @@ function MusicPlayer() {
   const [isPlaying, setIsPlaying] = useState(false);
   const [currentMusicTrack, SetCurrentMusicTrack] = useState(0);
   const [trackProgress, setTrackProgress] = useState(0);
+
   return (
     <div className="music-player">
       <h1>Music Player</h1>
@@ -26,6 +27,17 @@ function MusicPlayer() {
         src={tracks[currentMusicTrack].image}
         alt={tracks[currentMusicTrack].title}
       />
+      <audio ref={audioRef} src={tracks[currentMusicTrack].source} />
+      <div className="progress-bar">
+        <div
+          className="progress"
+          style={{
+            width: `${trackProgress}%`,
+            background: isPlaying ? "#3498db" : "#a43636",
+            height: "15px",
+          }}
+        ></div>
+      </div>
     </div>
   );
 }
