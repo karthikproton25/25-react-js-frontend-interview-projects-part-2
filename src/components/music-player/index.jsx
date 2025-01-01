@@ -21,6 +21,11 @@ function MusicPlayer() {
   return (
     <div className="music-player">
       <h1>Music Player</h1>
+      <h2>{tracks[currentMusicTrack].title}</h2>
+      <img
+        src={tracks[currentMusicTrack].image}
+        alt={tracks[currentMusicTrack].title}
+      />
     </div>
   );
 }
