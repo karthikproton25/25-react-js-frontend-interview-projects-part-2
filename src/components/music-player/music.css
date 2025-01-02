@@ -17,3 +17,10 @@
   margin: 20px 0px;
   overflow: hidden;
 }
+
+.track-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
