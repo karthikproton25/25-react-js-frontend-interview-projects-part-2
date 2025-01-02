@@ -1,4 +1,5 @@
 import { useRef, useState } from "react";
+import "./music.css";
 
 const tracks = [
   {
