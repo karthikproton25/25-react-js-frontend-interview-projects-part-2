@@ -9,3 +9,11 @@
   border-radius: 8px;
   margin-top: 20px;
 }
+
+.music-player .progress-bar {
+  height: 15px;
+  border-radius: 8px;
+  background-color: #cccccc;
+  margin: 20px 0px;
+  overflow: hidden;
+}
