@@ -35,6 +35,18 @@ function handlePauseAndPlay() {
   setIsPlaying(!isPlaying);
 }
 
+function handleSkipTrack(getDirection) {
+  if (getDirection === "forward") {
+    SetCurrentMusicTrack((prevTrack) => (prevTrack + 1) % tracks.length);
+  } else if (getDirection === "backward") {
+    SetCurrentMusicTrack(
+      (prevTrack) => (prevTrack - 1 + tracks.length) % tracks.length
+    );
+  }
+
+  setTrackProgress(0);
+}
+
 function MusicPlayer() {
   const audioRef = useRef(null);
   const [isPlaying, setIsPlaying] = useState(false);
