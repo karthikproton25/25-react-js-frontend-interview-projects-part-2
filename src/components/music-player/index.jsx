@@ -13,6 +13,18 @@ const tracks = [
   },
 ];
 
+useEffect(() => {
+  if (isPlaying) {
+    const interval = setInterval(() => {
+      setTrackProgress(
+        (audioRef.current.currentTime / audioRef.current.duration) * 100
+      );
+    }, 1000);
+
+    return () => clearInterval(interval);
+  }
+}, [isPlaying]);
+
 function MusicPlayer() {
   const audioRef = useRef(null);
   const [isPlaying, setIsPlaying] = useState(false);
