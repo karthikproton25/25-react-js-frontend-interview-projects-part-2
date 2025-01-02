@@ -25,6 +25,16 @@ useEffect(() => {
   }
 }, [isPlaying]);
 
+function handlePauseAndPlay() {
+  if (isPlaying) {
+    audioRef.current.pause();
+  } else {
+    audioRef.current.play();
+  }
+
+  setIsPlaying(!isPlaying);
+}
+
 function MusicPlayer() {
   const audioRef = useRef(null);
   const [isPlaying, setIsPlaying] = useState(false);
