@@ -5,6 +5,14 @@ function ProgressBar() {
       <div className="progress-bar">
         <div className="wrapper"></div>
       </div>
+      <div className="input-container">
+        <label>Input Percentage :</label>
+        <input
+          onChange={handleProgressPercentage}
+          type="number"
+          value={progressPercent}
+        />
+      </div>
     </div>
   );
 }
