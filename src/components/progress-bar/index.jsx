@@ -1,9 +1,21 @@
+import { useState } from "react";
+
 function ProgressBar() {
+  const [progressPercent, setProgressPercent] = useState(0);
+
   return (
     <div className="progress-bar-container">
       <h1>Custom Progress Bar</h1>
       <div className="progress-bar">
-        <div className="wrapper"></div>
+        <div className="wrapper">
+        {progressPercent >= 0 && progressPercent <= 100 ? (
+            <div
+              style={{ width: `${progressPercent}%` }}
+              className="innerWrapper"
+        )
+            ></div>
+        }
+        
       </div>
       <div className="input-container">
         <label>Input Percentage :</label>
