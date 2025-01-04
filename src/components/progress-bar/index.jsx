@@ -3,6 +3,7 @@ import { useState } from "react";
 
 function ProgressBar() {
   const [progressPercent, setProgressPercent] = useState(0);
+  const [errorMsg, setErrorMsg] = useState("");
 
   return (
     <div className="progress-bar-container">
