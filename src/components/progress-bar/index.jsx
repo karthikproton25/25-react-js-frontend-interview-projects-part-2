@@ -5,6 +5,15 @@ function ProgressBar() {
   const [progressPercent, setProgressPercent] = useState(0);
   const [errorMsg, setErrorMsg] = useState("");
 
+  function handleProgressPercentage(event) {
+    setProgressPercent(event.target.value);
+    if (event.target.value > 100) {
+      setErrorMsg("Please enter a value less than 100");
+    } else {
+      setErrorMsg("");
+    }
+  }
+
   return (
     <div className="progress-bar-container">
       <h1>Custom Progress Bar</h1>
