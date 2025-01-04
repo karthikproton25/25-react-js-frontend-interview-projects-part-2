@@ -1,4 +1,3 @@
-import { eventWrapper } from "@testing-library/user-event/dist/utils";
 import { useState } from "react";
 
 function ProgressBar() {
