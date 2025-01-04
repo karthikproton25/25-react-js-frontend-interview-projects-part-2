@@ -8,6 +8,7 @@ import CurrencyConverter from "./components/7. currency-converter";
 import FilterProducts from "./components/8. filter-products";
 import TipCalculator from "./components/tip-calculator";
 import MusicPlayer from "./components/10. music-player";
+import ProgressBar from "./components/11. progress-bar";
 
 import "./App.css";
 
@@ -25,6 +26,7 @@ function App() {
       <FilterProducts />
       <TipCalculator />
       <MusicPlayer />
+      <ProgressBar />
     </div>
   );
 }
