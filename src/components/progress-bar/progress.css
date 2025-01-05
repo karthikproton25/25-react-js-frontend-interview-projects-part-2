@@ -12,3 +12,14 @@
   align-items: center;
   margin-top: 30px;
 }
+
+.progress-bar-container .progress-bar .wrapper {
+  width: 200px;
+  height: 30px;
+  border-radius: 40px;
+  border-style: none;
+  background-color: #cdcdcd;
+  color: yellow;
+  position: relative;
+  z-index: -1;
+}
