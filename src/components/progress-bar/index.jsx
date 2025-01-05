@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./progress.css";
 
 function ProgressBar() {
   const [progressPercent, setProgressPercent] = useState(0);
@@ -41,4 +42,5 @@ function ProgressBar() {
     </div>
   );
 }
+
 export default ProgressBar;
