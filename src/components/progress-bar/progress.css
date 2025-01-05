@@ -1,0 +1,6 @@
+.progress-bar-container input {
+  border-radius: 12px;
+  width: 100px;
+  padding: 10px;
+  outline: none;
+}
