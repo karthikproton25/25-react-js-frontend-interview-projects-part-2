@@ -1,4 +1,10 @@
+import { useState } from "react";
+
 function BMICalculator() {
+  const [weight, setWeight] = useState(null);
+  const [height, setHeight] = useState(null);
+  const [bmi, setBMI] = useState(null);
+
   return (
     <div className="bmi-class-container">
       <h1>BMI Calculator</h1>
@@ -18,6 +24,7 @@ function BMICalculator() {
           value={weight}
         />
       </div>
+      <button onClick={calculateBmi}>Calculate BMI</button>
     </div>
   );
 }
