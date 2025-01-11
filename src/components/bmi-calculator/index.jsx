@@ -4,6 +4,14 @@ function BMICalculator() {
   const [weight, setWeight] = useState(null);
   const [height, setHeight] = useState(null);
   const [bmi, setBMI] = useState(null);
+  const [errorMsg, setErrorMsg] = useState("");
+
+  function calculateBmi() {
+    if (!height || !weight) {
+      setErrorMsg("Please enter both height and weight");
+      return;
+    }
+  }
 
   return (
     <div className="bmi-class-container">
