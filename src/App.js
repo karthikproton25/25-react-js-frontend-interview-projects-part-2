@@ -9,6 +9,7 @@ import FilterProducts from "./components/8. filter-products";
 import TipCalculator from "./components/tip-calculator";
 import MusicPlayer from "./components/10. music-player";
 import ProgressBar from "./components/11. progress-bar";
+import BMIcalculator from "./components/12. bmi-calculator";
 
 import "./App.css";
 
@@ -27,6 +28,7 @@ function App() {
       <TipCalculator />
       <MusicPlayer />
       <ProgressBar />
+      <BMIcalculator />
     </div>
   );
 }
