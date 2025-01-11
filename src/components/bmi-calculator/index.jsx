@@ -22,6 +22,14 @@ function BMICalculator() {
       );
       return;
     }
+    const calculateHeightInMeters = numericHeight / 100;
+    const calculateBmiValue = (
+      numericWeight /
+      (calculateHeightInMeters * calculateHeightInMeters)
+    ).toFixed(2);
+
+    setBMI(calculateBmiValue);
+    setErrorMsg("");
   }
 
   return (
