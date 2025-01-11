@@ -11,6 +11,17 @@ function BMICalculator() {
       setErrorMsg("Please enter both height and weight");
       return;
     }
+    if (
+      isNaN(numericHeight) ||
+      isNaN(numericWeight) ||
+      numericHeight <= 0 ||
+      numericWeight <= 0
+    ) {
+      setErrorMsg(
+        "Please enter valid numeric values for both height and weight"
+      );
+      return;
+    }
   }
 
   return (
