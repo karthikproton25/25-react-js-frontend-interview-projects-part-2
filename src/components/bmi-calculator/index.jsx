@@ -52,6 +52,18 @@ function BMICalculator() {
         />
       </div>
       <button onClick={calculateBmi}>Calculate BMI</button>
+      {errorMsg ? <p className="error-msg-text">{errorMsg}</p> : null}
+      {errorMsg !== "" ? null : (
+        <p className="bmi-result-text">
+          {bmi < 18.5
+            ? "Underweight"
+            : bmi >= 18.5 && bmi < 24.9
+            ? "Normal Weight"
+            : bmi >= 25 && bmi < 29.9
+            ? "Overweight"
+            : "Obese"}
+        </p>
+      )}
     </div>
   );
 }

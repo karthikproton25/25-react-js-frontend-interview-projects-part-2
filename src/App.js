@@ -28,7 +28,7 @@ function App() {
       <TipCalculator />
       <MusicPlayer />
       <ProgressBar />
-      <BMIcalculator />
+      <BMICalculator />
     </div>
   );
 }
