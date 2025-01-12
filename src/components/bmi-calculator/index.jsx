@@ -12,6 +12,10 @@ function BMICalculator() {
       setErrorMsg("Please enter both height and weight");
       return;
     }
+
+    const numericHeight = parseFloat(height);
+    const numericWeight = parseFloat(weight);
+
     if (
       isNaN(numericHeight) ||
       isNaN(numericWeight) ||
@@ -23,6 +27,7 @@ function BMICalculator() {
       );
       return;
     }
+
     const calculateHeightInMeters = numericHeight / 100;
     const calculateBmiValue = (
       numericWeight /
@@ -33,10 +38,12 @@ function BMICalculator() {
     setErrorMsg("");
   }
 
+  console.log(bmi);
+
   return (
-    <div className="bmi-class-container">
+    <div className="bmi-calculator-container">
       <h1>BMI Calculator</h1>
-      <div className="input-conatiner">
+      <div className="input-container">
         <label>Height (cm):</label>
         <input
           onChange={(event) => setHeight(event.target.value)}

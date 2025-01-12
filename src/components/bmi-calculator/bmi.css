@@ -30,3 +30,9 @@
   cursor: pointer;
   margin-bottom: 30px;
 }
+
+.error-msg-text,
+.bmi-result-text {
+  font-weight: bolder;
+  font-size: 25px;
+}
