@@ -17,3 +17,16 @@
   display: block;
   margin-right: 10px;
 }
+
+.bmi-calculator-container .input-container input {
+  padding: 10px;
+}
+
+.bmi-calculator-container button {
+  padding: 12px 20px;
+  background-color: #f3f800;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-bottom: 30px;
+}
