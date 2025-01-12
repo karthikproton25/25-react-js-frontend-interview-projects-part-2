@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./bmi.css";
 
 function BMICalculator() {
   const [weight, setWeight] = useState(null);
