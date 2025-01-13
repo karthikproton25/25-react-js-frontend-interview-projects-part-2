@@ -34,8 +34,14 @@ function ButtonRippleEffect() {
   return (
     <div className="ripple-effect-container">
       <h1>Button Ripple Effect</h1>
-      <button onClick={handleRippleEffect}>
-        Click button to see ripple effect
+      <button className="ripple-btn" onClick={handleRippleEffect}>
+        {isRipplingEffect ? (
+          <span
+            className="ripple-inner-span"
+            style={{ left: coordinates.x, top: coordinates.y }}
+          ></span>
+        ) : null}
+        Click Button to See Ripple Effect
       </button>
     </div>
   );
