@@ -16,6 +16,21 @@ function ButtonRippleEffect() {
     });
   }
 
+  useEffect(() => {
+    if (coordinates.x !== -1 && coordinates.y !== -1) {
+      setIsRipplingEffect(true);
+      setTimeout(() => setIsRipplingEffect(false), 300);
+    } else {
+      setIsRipplingEffect(false);
+    }
+  }, [coordinates]);
+
+  useEffect(() => {
+    if (!isRipplingEffect) setCoordinates({ x: -1, y: -1 });
+  }, [isRipplingEffect]);
+
+  console.log(coordinates, isRipplingEffect);
+
   return (
     <div className="ripple-effect-container">
       <h1>Button Ripple Effect</h1>
