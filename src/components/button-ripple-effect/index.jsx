@@ -8,6 +8,12 @@ function ButtonRippleEffect() {
       event.clientX,
       event.clientY
     );
+
+    const rect = event.target.getBoundingClientRect();
+    setCoordinates({
+      x: event.clientX - rect.left,
+      y: event.clientY - rect.top,
+    });
   }
 
   return (
