@@ -1,3 +1,6 @@
+import { useEffect, useState } from "react";
+import "./ripple.css";
+
 function ButtonRippleEffect() {
   const [isRipplingEffect, setIsRipplingEffect] = useState(false);
   const [coordinates, setCoordinates] = useState({ x: -1, y: -1 });
