@@ -19,3 +19,15 @@
   color: #fff;
   font-weight: bold;
 }
+
+.ripple-effect-container .ripple-btn .ripple-inner-span {
+  width: 30px;
+  height: 20px;
+  position: absolute;
+  background-color: rgb(255, 0, 102);
+  content: "";
+  display: block;
+  opacity: 1;
+  border-radius: 9999px;
+  animation: 1s ease 1 forwards ripple-effect-keyframe;
+}
