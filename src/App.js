@@ -9,8 +9,9 @@ import FilterProducts from "./components/8. filter-products";
 import TipCalculator from "./components/tip-calculator";
 import MusicPlayer from "./components/10. music-player";
 import ProgressBar from "./components/11. progress-bar";
-import BMIcalculator from "./components/12. bmi-calculator";
+import BMICalculator from "./components/12. bmi-calculator";
 import ButtonRippleEffect from "./components/13. button-ripple-effect";
+import DragAndDropFeature from "./components/14. drag-and-drop";
 
 import "./App.css";
 
@@ -31,6 +32,7 @@ function App() {
       <ProgressBar />
       <BMICalculator />
       <ButtonRippleEffect />
+      <DragAndDropFeature />
     </div>
   );
 }
