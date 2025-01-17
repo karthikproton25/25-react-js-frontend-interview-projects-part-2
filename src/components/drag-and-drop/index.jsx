@@ -38,6 +38,11 @@ function DragAndDropFeature() {
       completed: [],
     };
 
+    todos.forEach(todoItem => {
+      todoListToRender[todoItem.status]
+  
+    });
+
 
   return (
     <div className="drag-and-drop-container">
