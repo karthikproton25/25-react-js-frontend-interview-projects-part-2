@@ -38,9 +38,12 @@ function DragAndDropFeature() {
       <div className="drag-drop-board">
         <div className="work-in-progress">
           <h3>In Progress</h3>
+
+          <div className="todo-list-wrapper">{renderTodos().wip}</div>
         </div>
         <div className="completed">
           <h3>Completed</h3>
+          <div className="todo-list-wrapper">{renderTodos().completed}</div>
         </div>
       </div>
     </div>
