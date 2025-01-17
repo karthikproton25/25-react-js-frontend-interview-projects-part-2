@@ -32,6 +32,13 @@ function DragAndDropFeature() {
 
   console.log(todos);
 
+  function renderTodos() {
+    const todoListToRender = {
+      wip: [],
+      completed: [],
+    };
+
+
   return (
     <div className="drag-and-drop-container">
       <h1>Drag and Drop</h1>
