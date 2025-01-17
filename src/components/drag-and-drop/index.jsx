@@ -36,7 +36,12 @@ function DragAndDropFeature() {
     <div className="drag-and-drop-container">
       <h1>Drag and Drop</h1>
       <div className="drag-drop-board">
-        <div className="work-in-progress"></div>
+        <div className="work-in-progress">
+          <h3>In Progress</h3>
+        </div>
+        <div className="completed">
+          <h3>Completed</h3>
+        </div>
       </div>
     </div>
   );
