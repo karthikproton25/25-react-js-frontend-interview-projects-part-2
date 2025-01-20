@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import './draganddrop.css'
 
 function DragAndDropFeature() {
   const [loading, setLoading] = useState(false);
