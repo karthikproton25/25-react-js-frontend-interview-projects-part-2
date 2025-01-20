@@ -8,3 +8,8 @@
   margin-top: 30px;
   margin-bottom: 50px;
 }
+
+.drag-and-drop-board {
+  display: flex;
+  gap: 40px;
+}
