@@ -47,15 +47,26 @@ function DragAndDropFeature() {
   return (
     <div className="drag-and-drop-container">
       <h1>Drag and Drop</h1>
-      <div className="drag-drop-board">
-        <div className="work-in-progress">
+      <div className="drag-and-drop-board">
+        <div
+          onDrop={(event) => onDrop(event, "wip")}
+          onDragOver={(event) => event.preventDefault()}
+          className="work-in-progress"
+        >
           <h3>In Progress</h3>
-
-          <div className="todo-list-wrapper">{renderTodos().wip}</div>
+          <div className="todo-list-wrapper">
+          {renderTodos().wip}
+          </div>
         </div>
-        <div className="completed">
+        <div
+          onDrop={(event) => onDrop(event, "completed")}
+          onDragOver={(event) => event.preventDefault()}
+          className="completed"
+        >
           <h3>Completed</h3>
-          <div className="todo-list-wrapper">{renderTodos().completed}</div>
+          <div className="todo-list-wrapper">
+          {renderTodos().completed}
+          </div>
         </div>
       </div>
     </div>
