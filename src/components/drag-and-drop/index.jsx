@@ -36,6 +36,21 @@ function DragAndDropFeature() {
     event.dataTransfer.setData('id',id)
   }
 
+  function onDrop(event,status){
+    const id = event.dataTransfer.getData('id');
+    console.log(event.dataTransfer.getData('id'));
+    let updateTodos = todos.filter(todoItem=> {
+
+        if(todoItem.id.toString() === id){
+            todoItem.status = status
+        }
+        return todoItem
+    })
+
+    setTodos(updateTodos)
+
+  }
+
   function renderTodos() {
     const todoListToRender = {
       wip: [],
