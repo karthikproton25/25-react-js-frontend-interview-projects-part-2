@@ -13,3 +13,17 @@
   display: flex;
   gap: 40px;
 }
+
+.todo-card {
+  height: 50px;
+  width: 200px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  background-color: #f3f800;
+  color: #000;
+  font-weight: bold;
+  font-size: 12px;
+}
