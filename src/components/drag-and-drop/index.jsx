@@ -32,6 +32,10 @@ function DragAndDropFeature() {
 
   console.log(todos);
 
+  function onDragStart(event, id){
+    event.dataTransfer.setData('id',id)
+  }
+
   function renderTodos() {
     const todoListToRender = {
       wip: [],
