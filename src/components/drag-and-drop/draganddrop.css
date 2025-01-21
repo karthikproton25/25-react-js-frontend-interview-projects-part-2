@@ -34,3 +34,11 @@
   flex-direction: column;
   gap: 20px;
 }
+
+.todo-list-wrapper {
+  height: 500px;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
