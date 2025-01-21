@@ -27,3 +27,10 @@
   font-weight: bold;
   font-size: 12px;
 }
+
+.work-in-progress,
+.completed {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
