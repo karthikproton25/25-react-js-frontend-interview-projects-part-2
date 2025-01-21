@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import './draganddrop.css'
+import "./draganddrop.css";
 
 function DragAndDropFeature() {
   const [loading, setLoading] = useState(false);
@@ -33,23 +33,21 @@ function DragAndDropFeature() {
 
   console.log(todos);
 
-  function onDragStart(event, id){
-    event.dataTransfer.setData('id',id)
+  function onDragStart(event, id) {
+    event.dataTransfer.setData("id", id);
   }
 
-  function onDrop(event,status){
-    const id = event.dataTransfer.getData('id');
-    console.log(event.dataTransfer.getData('id'));
-    let updateTodos = todos.filter(todoItem=> {
+  function onDrop(event, status) {
+    const id = event.dataTransfer.getData("id");
+    console.log(event.dataTransfer.getData("id"));
+    let updateTodos = todos.filter((todoItem) => {
+      if (todoItem.id.toString() === id) {
+        todoItem.status = status;
+      }
+      return todoItem;
+    });
 
-        if(todoItem.id.toString() === id){
-            todoItem.status = status
-        }
-        return todoItem
-    })
-
-    setTodos(updateTodos)
-
+    setTodos(updateTodos);
   }
 
   function renderTodos() {
@@ -58,11 +56,23 @@ function DragAndDropFeature() {
       completed: [],
     };
 
-    todos.forEach(todoItem => {
-      todoListToRender[todoItem.status]
-  
+    todos.forEach((todoItem) => {
+      todoListToRender[todoItem.status].push(
+        <div
+          onDragStart={(event) => onDragStart(event, todoItem.id)}
+          draggable
+          key={todoItem.id}
+          className="todo-card"
+        >
+          {todoItem.todo}
+        </div>
+      );
     });
 
+    return todoListToRender;
+  }
+
+  if (loading) return <h1>Loading data! Please wait</h1>;
 
   return (
     <div className="drag-and-drop-container">
@@ -74,9 +84,7 @@ function DragAndDropFeature() {
           className="work-in-progress"
         >
           <h3>In Progress</h3>
-          <div className="todo-list-wrapper">
-          {renderTodos().wip}
-          </div>
+          <div className="todo-list-wrapper">{renderTodos().wip}</div>
         </div>
         <div
           onDrop={(event) => onDrop(event, "completed")}
@@ -84,9 +92,7 @@ function DragAndDropFeature() {
           className="completed"
         >
           <h3>Completed</h3>
-          <div className="todo-list-wrapper">
-          {renderTodos().completed}
-          </div>
+          <div className="todo-list-wrapper">{renderTodos().completed}</div>
         </div>
       </div>
     </div>
