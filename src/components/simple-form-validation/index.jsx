@@ -1,4 +1,15 @@
+import { useState } from "react";
 function FormValidation() {
+  const [formData, setFormData] = useState({
+    username: "",
+    email: "",
+    password: "",
+  });
+  const [errors, setErrors] = useState({
+    username: "",
+    password: "",
+    email: "",
+  });
   return (
     <div>
       <h1>Simple Form Validation</h1>
