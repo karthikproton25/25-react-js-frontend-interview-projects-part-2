@@ -4,7 +4,7 @@ function FormValidation() {
       <h1>Simple Form Validation</h1>
       <form>
         <div className="input-wrapper">
-          <label>User Name</label>
+          <label htmlFor="username">User Name</label>
           <input
             type="text"
             name="username"
@@ -12,7 +12,7 @@ function FormValidation() {
           />
         </div>
         <div className="input-wrapper">
-          <label>Email</label>
+          <label htmlFor="email">Email</label>
           <input
             id="email"
             type="email"
@@ -21,7 +21,7 @@ function FormValidation() {
           />
         </div>
         <div className="input-wrapper">
-          <label>Password</label>
+          <label htmlFor="password">Password</label>
           <input
             type="password"
             id="password"
