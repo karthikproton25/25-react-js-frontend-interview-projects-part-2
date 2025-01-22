@@ -11,6 +11,24 @@ function FormValidation() {
             placeholder="Enter your username"
           />
         </div>
+        <div className="input-wrapper">
+          <label>Email</label>
+          <input
+            id="email"
+            type="email"
+            name="email"
+            placeholder="Enter your email"
+          />
+        </div>
+        <div className="input-wrapper">
+          <label>Password</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Enter your password"
+          />
+        </div>
       </form>
     </div>
   );
