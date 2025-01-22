@@ -29,6 +29,7 @@ function FormValidation() {
             placeholder="Enter your password"
           />
         </div>
+        <button type="submit">Submit</button>
       </form>
     </div>
   );
