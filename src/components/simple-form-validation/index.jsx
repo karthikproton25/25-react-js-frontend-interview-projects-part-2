@@ -41,6 +41,7 @@ function FormValidation() {
             name="password"
             placeholder="Enter your password"
           />
+          <span>{errors?.password}</span>
         </div>
         <button type="submit">Submit</button>
       </form>
