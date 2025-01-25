@@ -19,7 +19,17 @@ function FormValidation() {
     });
     validateInput(name, value);
   }
-  return (
+
+  function validateInput(getName, getValue) {
+    switch (getName) {
+      case "username":
+        setErrors((prevErrors) => ({
+          ...prevErrors,
+          username:
+            getValue.length < 3 ? "Username must be at least 3 characters" : "",
+        }))};
+  
+        return (
     <div>
       <h1>Simple Form Validation</h1>
       <form>
