@@ -10,6 +10,15 @@ function FormValidation() {
     password: "",
     email: "",
   });
+
+  function handleFormChange(event) {
+    const { name, value } = event.target;
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
+    validateInput(name, value);
+  }
   return (
     <div>
       <h1>Simple Form Validation</h1>
