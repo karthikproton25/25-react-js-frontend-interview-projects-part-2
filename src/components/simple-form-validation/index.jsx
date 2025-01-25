@@ -20,6 +20,8 @@ function FormValidation() {
             type="text"
             name="username"
             placeholder="Enter your username"
+            value={formData.username}
+            onChange={handleFormChange}
           />
           <span>{errors?.username}</span>
         </div>
