@@ -31,6 +31,7 @@ function FormValidation() {
             name="email"
             placeholder="Enter your email"
           />
+          <span>{errors?.email}</span>
         </div>
         <div className="input-wrapper">
           <label htmlFor="password">Password</label>
