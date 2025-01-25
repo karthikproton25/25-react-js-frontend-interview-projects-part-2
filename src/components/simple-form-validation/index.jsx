@@ -27,7 +27,29 @@ function FormValidation() {
           ...prevErrors,
           username:
             getValue.length < 3 ? "Username must be at least 3 characters" : "",
-        }))};
+        }));
+      
+        break;
+        case "email":
+          setErrors((prevErrors) => ({
+            ...prevErrors,
+            email: /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(getValue)
+              ? ""
+              : "Invalid email address",
+          }));
+         
+          break;
+          case "password":
+            setErrors((prevErrors) => ({
+              ...prevErrors,
+              password:
+                getValue.length < 5 ? "Password must be at least 5 characters" : "",
+            }));
+    
+
+
+
+      }
   
         return (
     <div>
