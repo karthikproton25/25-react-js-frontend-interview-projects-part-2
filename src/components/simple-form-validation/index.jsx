@@ -53,6 +53,19 @@ function FormValidation() {
     }
   }
 
+  function handleFormSubmit(event) {
+    event.preventDefault();
+
+    const validateErrors = {};
+
+    Object.keys(formData).forEach((dataItem) => {
+      validateInput(dataItem, formData[dataItem]);
+      if (errors[dataItem]) {
+        validateErrors[dataItem] = errors[dataItem];
+      }
+    });
+  }
+
   return (
     <div>
       <h1>Simple Form Validation</h1>
