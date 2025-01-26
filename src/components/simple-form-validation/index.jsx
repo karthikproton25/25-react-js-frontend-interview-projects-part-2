@@ -1,4 +1,6 @@
 import { useState } from "react";
+import "./form.css";
+
 function FormValidation() {
   const [formData, setFormData] = useState({
     username: "",
