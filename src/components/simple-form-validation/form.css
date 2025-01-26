@@ -17,3 +17,12 @@
   flex-direction: column;
   gap: 20px;
 }
+
+.input-wrapper {
+  display: flex;
+  gap: 10px;
+}
+
+.input-wrapper label {
+  flex: 1;
+}
