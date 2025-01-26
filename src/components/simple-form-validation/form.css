@@ -8,3 +8,12 @@
   margin-top: 30px;
   margin-bottom: 30px;
 }
+
+.form-validation-container form {
+  width: 800px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
