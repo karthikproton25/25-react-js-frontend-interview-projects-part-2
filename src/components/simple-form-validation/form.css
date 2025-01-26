@@ -26,3 +26,11 @@
 .input-wrapper label {
   flex: 1;
 }
+
+.input-wrapper input {
+  flex: 2;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+}
