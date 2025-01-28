@@ -34,3 +34,10 @@
   font-size: 14px;
   outline: none;
 }
+
+.input-wrapper span {
+  flex: 1;
+  color: red;
+  font-weight: bold;
+  font-size: 16px;
+}
