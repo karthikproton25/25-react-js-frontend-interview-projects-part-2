@@ -58,25 +58,39 @@ function FormValidation() {
   function handleFormSubmit(event) {
     event.preventDefault();
 
-    const validateErrors = {};
+    // const validateErrors = {};
 
-    Object.keys(formData).forEach((dataItem) => {
-      validateInput(dataItem, formData[dataItem]);
-      if (errors[dataItem]) {
-        validateErrors[dataItem] = errors[dataItem];
-      }
-    });
+    // Object.keys(formData).forEach((dataItem) => {
+    //   validateInput(dataItem, formData[dataItem]);
+    //   if (errors[dataItem]) {
+    //     validateErrors[dataItem] = errors[dataItem];
+    //   }
+    // });
+
+    // setErrors((prevErrors) => ({
+    //   ...prevErrors,
+    //   ...validateErrors,
+    // }));
+
+    // if (Object.values(validateErrors).every((error) => error === "")) {
+    //   //perform your form submission logic
+    // } else {
+    //   console.log("error is present. Please fix");
+    // }
   }
 
+  console.log(errors);
+
   return (
-    <div>
+    <div className="form-validation-container">
       <h1>Simple Form Validation</h1>
-      <form>
+      <form onSubmit={handleFormSubmit}>
         <div className="input-wrapper">
           <label htmlFor="username">User Name</label>
           <input
             type="text"
             name="username"
+            id="username"
             placeholder="Enter your username"
             value={formData.username}
             onChange={handleFormChange}
@@ -89,7 +103,9 @@ function FormValidation() {
             id="email"
             type="email"
             name="email"
+            value={formData.email}
             placeholder="Enter your email"
+            onChange={handleFormChange}
           />
           <span>{errors?.email}</span>
         </div>
@@ -100,6 +116,8 @@ function FormValidation() {
             id="password"
             name="password"
             placeholder="Enter your password"
+            value={formData.password}
+            onChange={handleFormChange}
           />
           <span>{errors?.password}</span>
         </div>
