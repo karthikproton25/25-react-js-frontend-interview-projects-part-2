@@ -36,6 +36,10 @@ function FileUpload() {
       progressReference.current.value = 0;
     }
 
+    function handleError() {
+      statusReference.current.innerHTML = "Upload failed! Please try again";
+    }
+
   return <div className="file-upload-container">
     <h1>File Upload</h1>
     <input
