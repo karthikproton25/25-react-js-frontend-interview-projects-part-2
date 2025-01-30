@@ -31,6 +31,11 @@ function FileUpload() {
       )} % uploaded...`;
     }
 
+    function handleSuccess(event) {
+      statusReference.current.innerHTML = event.target.responseText;
+      progressReference.current.value = 0;
+    }
+
   return <div className="file-upload-container">
     <h1>File Upload</h1>
     <input
