@@ -16,3 +16,8 @@
   text-overflow: ellipsis;
   overflow: hidden;
 }
+
+.file-upload-container .load {
+  font-size: 20px;
+  font-weight: bolder;
+}
