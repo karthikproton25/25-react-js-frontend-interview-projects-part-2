@@ -22,6 +22,15 @@ function FileUpload() {
       xhr.send(formData);
     }
 
+    function handleProgress(event) {
+      loadReference.current.innerHTML = `Uploaded ${event.loaded} bytes of ${event.total}`;
+      const percentage = (event.loaded / event.total) * 100;
+      progressReference.current.value = Math.round(percentage);
+      statusReference.current.innerHTML = `${Math.round(
+        percentage
+      )} % uploaded...`;
+    }
+
   return <div className="file-upload-container">
     <h1>File Upload</h1>
     <input
