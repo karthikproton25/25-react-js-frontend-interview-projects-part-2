@@ -5,6 +5,7 @@ function FileUpload() {
     const uploadReference = useRef();
     const progressReference = useRef();
     const statusReference = useRef();
+    const loadReference = useRef();
 
     function handleUploadFile() {
       const file = uploadReference.current.files[0];
