@@ -40,6 +40,10 @@ function FileUpload() {
       statusReference.current.innerHTML = "Upload failed! Please try again";
     }
 
+    function handleAbort() {
+      statusReference.current.innerHTML = "Upload aborted! Please try again";
+    }
+  
   return <div className="file-upload-container">
     <h1>File Upload</h1>
     <input
