@@ -6,7 +6,12 @@ function FileUpload() {
 
   return <div className="file-upload-container">
     <h1>File Upload</h1>
-    <input type="file" name="file" reference="{UploadReference}" />
+    <input
+        onChange={handleUploadFile}
+        type="file"
+        name="file"
+        ref={uploadReference}
+      />
     <label htmlFor=""></label>
     <p></p>
     <img src="" alt="" />
