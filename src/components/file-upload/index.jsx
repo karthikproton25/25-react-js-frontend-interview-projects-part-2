@@ -44,18 +44,28 @@ function FileUpload() {
       statusReference.current.innerHTML = "Upload aborted! Please try again";
     }
   
-  return <div className="file-upload-container">
-    <h1>File Upload</h1>
+  return (
+    <div className="file-upload-container">
+    <h1>File Upload with Progress Bar</h1>
     <input
-        onChange={handleUploadFile}
-        type="file"
-        name="file"
-        ref={uploadReference}
-      />
-    <label htmlFor=""></label>
-    <p></p>
-    <img src="" alt="" />
-  </div>;
+      onChange={handleUploadFile}
+      type="file"
+      name="file"
+      ref={uploadReference}
+    />
+    <label>
+      File Progress:{" "}
+      <progress ref={progressReference} value={"0"} max={"100"} />
+    </label>
+    <p className="status" ref={statusReference}></p>
+    <p className="load" ref={loadReference}></p>
+    <img
+      src={file}
+      alt="File-upload"
+      style={{ width: "300px", height: "300px" }}
+    />
+  </div>
+  );
 }
 
 eport default FileUpload;
