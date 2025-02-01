@@ -9,6 +9,14 @@ function Quiz() {
   return (
     <div className="quiz">
       <h1>Quiz App</h1>
+      {!showResult ? (
+        <div> </div>
+      ) : (
+        <div>
+          <h3>Quiz Completed</h3>
+          <p></p>
+        </div>
+      )}
     </div>
   );
 }
