@@ -5,3 +5,5 @@ function Quiz() {
     </div>
   );
 }
+
+export default Quiz;
