@@ -8,26 +8,7 @@ function Quiz() {
 
   return (
     <div className="quiz">
-    <h1>Quiz App</h1>
-    {!showResult ? (
-      <div>
-        <h2>Question {currentQuestion + 1}</h2>
-        <p>{questions[currentQuestion].question}</p>
-        <div className="options">
-          {questions[currentQuestion].options.map((optionItem) => (
-            <button
-              key={optionItem}
-              className={`option ${
-                selectedOptions[currentQuestion] === optionItem
-                  ? "selected"
-                  : ""
-              }`}
-            >
-              {optionItem}
-            </button>
-          ))}
-        </div>
-    }
+      <h1>Quiz App</h1>
     </div>
   );
 }
