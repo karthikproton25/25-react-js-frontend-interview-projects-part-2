@@ -27,6 +27,18 @@ function Quiz() {
               </button>
             ))}
           </div>
+          <div className="button-container">
+            <button
+              onClick={handlePreviousQuestion}
+              disabled={currentQuestion === 0}
+              className="prev-btn"
+            >
+              Previous
+            </button>
+            <button onClick={handleNextQuestion} className="next-btn">
+              {currentQuestion < questions.length - 1 ? "Next" : "Finish"}
+            </button>
+          </div>
         </div>
       ) : (
         <div>
