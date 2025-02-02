@@ -10,7 +10,10 @@ function Quiz() {
     <div className="quiz">
       <h1>Quiz App</h1>
       {!showResult ? (
-        <div> </div>
+        <div>
+          <h2>Question {currentQuestion + 1}</h2>
+          <p>{questions[currentQuestion].question}</p>
+        </div>
       ) : (
         <div>
           <h3>Quiz Completed</h3>
