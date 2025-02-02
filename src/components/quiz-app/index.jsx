@@ -13,6 +13,20 @@ function Quiz() {
         <div>
           <h2>Question {currentQuestion + 1}</h2>
           <p>{questions[currentQuestion].question}</p>
+          <div className="options">
+            {questions[currentQuestion].options.map((optionItem) => (
+              <button
+                key={optionItem}
+                className={`option ${
+                  selectedOptions[currentQuestion] === optionItem
+                    ? "selected"
+                    : ""
+                }`}
+              >
+                {optionItem}
+              </button>
+            ))}
+          </div>
         </div>
       ) : (
         <div>
