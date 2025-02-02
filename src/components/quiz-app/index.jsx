@@ -14,7 +14,8 @@ function Quiz() {
       ) : (
         <div>
           <h3>Quiz Completed</h3>
-          <p></p>
+          <p>Your Score: {score}</p>
+          <button className="restart-button">Restart Quiz</button>
         </div>
       )}
     </div>
