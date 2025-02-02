@@ -6,6 +6,23 @@ function Quiz() {
   );
   const [showResult, setShowResult] = useState(false);
 
+
+  function handlePreviousQuestion() {
+    if (currentQuestion > 0) {
+      setCurrentQuestion(currentQuestion - 1);
+    }
+  }
+
+  console.log(selectedOptions, score);
+
+  function handleNextQuestion() {
+    if (
+      selectedOptions[currentQuestion] ===
+      questions[currentQuestion].correctAnswer
+    ) {
+      setScore(score + 1);
+    }
+
   return (
     <div className="quiz">
       <h1>Quiz App</h1>
