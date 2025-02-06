@@ -75,7 +75,6 @@ function Quiz() {
   );
   const [showResult, setShowResult] = useState(false);
 
-
   function handlePreviousQuestion() {
     if (currentQuestion > 0) {
       setCurrentQuestion(currentQuestion - 1);
@@ -91,6 +90,13 @@ function Quiz() {
     ) {
       setScore(score + 1);
     }
+
+    if (currentQuestion < questions.length - 1) {
+      setCurrentQuestion(currentQuestion + 1);
+    } else {
+      setShowResult(true);
+    }
+  }
 
   return (
     <div className="quiz">
