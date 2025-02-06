@@ -17,3 +17,16 @@
   flex-direction: column;
   gap: 20px;
 }
+
+.quiz .options-wrapper h2,
+.show-result-wrapper h2 {
+  margin-bottom: 10px;
+}
+
+.quiz .options-wrapper p,
+.show-result-wrapper p {
+  font-size: 20px;
+  margin-bottom: 15px;
+  font-weight: bolder;
+  color: rgb(6, 242, 33);
+}
