@@ -30,3 +30,15 @@
   font-weight: bolder;
   color: rgb(6, 242, 33);
 }
+
+.quiz .options-wrapper .options .option {
+  width: 100%;
+  margin-bottom: 5px;
+  padding: 10px;
+  border: 1px solid #cccccc;
+  cursor: pointer;
+  outline: none;
+  background-color: #0fffe7;
+  font-size: 18px;
+  font-weight: bold;
+}
