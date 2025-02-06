@@ -42,3 +42,8 @@
   font-size: 18px;
   font-weight: bold;
 }
+
+.quiz .options-wrapper .options .option.selected {
+  background-color: #4caf50;
+  color: #ffffff;
+}
