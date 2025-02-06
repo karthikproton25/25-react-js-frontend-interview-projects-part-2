@@ -98,6 +98,13 @@ function Quiz() {
     }
   }
 
+  function handleRestartQuiz() {
+    setCurrentQuestion(0);
+    setScore(0);
+    setSelectedOptions(new Array(questions.length).fill(null));
+    setShowResult(false);
+  }
+
   return (
     <div className="quiz">
       <h1>Quiz App</h1>
