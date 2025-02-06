@@ -68,6 +68,7 @@ const questions = [
     correctAnswer: "Canberra",
   },
 ];
+
 function Quiz() {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [score, setScore] = useState(0);
@@ -75,11 +76,12 @@ function Quiz() {
     new Array(questions.length).fill(null)
   );
   const [showResult, setShowResult] = useState(false);
-  
+
   function handleSelectedOption(getOptionItem) {
     const updatedSelectedOptions = [...selectedOptions];
     updatedSelectedOptions[currentQuestion] = getOptionItem;
     setSelectedOptions(updatedSelectedOptions);
+  }
 
   function handlePreviousQuestion() {
     if (currentQuestion > 0) {
@@ -115,7 +117,7 @@ function Quiz() {
     <div className="quiz">
       <h1>Quiz App</h1>
       {!showResult ? (
-        <div>
+        <div className="options-wrapper">
           <h2>Question {currentQuestion + 1}</h2>
           <p>{questions[currentQuestion].question}</p>
           <div className="options">
@@ -147,10 +149,12 @@ function Quiz() {
           </div>
         </div>
       ) : (
-        <div>
+        <div className="show-result-wrapper">
           <h3>Quiz Completed</h3>
           <p>Your Score: {score}</p>
-          <button className="restart-button">Restart Quiz</button>
+          <button onClick={handleRestartQuiz} className="restart-button">
+            Restart Quiz
+          </button>
         </div>
       )}
     </div>
