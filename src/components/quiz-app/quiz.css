@@ -47,3 +47,11 @@
   background-color: #4caf50;
   color: #ffffff;
 }
+
+.quiz .options-wrapper .button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+}
