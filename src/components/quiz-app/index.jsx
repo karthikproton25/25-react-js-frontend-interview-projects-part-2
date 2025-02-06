@@ -121,6 +121,7 @@ function Quiz() {
                     ? "selected"
                     : ""
                 }`}
+                onClick={() => handleSelectedOption(optionItem)}
               >
                 {optionItem}
               </button>
