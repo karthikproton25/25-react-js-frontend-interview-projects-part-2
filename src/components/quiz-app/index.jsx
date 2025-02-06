@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./quiz.css";
 
 const questions = [
   {
@@ -74,6 +75,11 @@ function Quiz() {
     new Array(questions.length).fill(null)
   );
   const [showResult, setShowResult] = useState(false);
+  
+  function handleSelectedOption(getOptionItem) {
+    const updatedSelectedOptions = [...selectedOptions];
+    updatedSelectedOptions[currentQuestion] = getOptionItem;
+    setSelectedOptions(updatedSelectedOptions);
 
   function handlePreviousQuestion() {
     if (currentQuestion > 0) {
