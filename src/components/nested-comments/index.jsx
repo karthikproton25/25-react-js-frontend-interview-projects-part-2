@@ -27,12 +27,16 @@ function NestedComments() {
   return (
     <div className="nested-comments-container">
       <h1>Nested Comments</h1>
-      <textarea
-        onChange={(event) => setInputValue(event.target.value)}
-        rows={"5"}
-        cols={"100"}
-        value={inputValue}
-      />
+      <div className="comment-wrapper">
+        <textarea
+          onChange={(event) => setInputValue(event.target.value)}
+          rows={"5"}
+          cols={"100"}
+          value={inputValue}
+        />
+        <br />
+        <button>Add Comment</button>
+      </div>
     </div>
   );
 }
