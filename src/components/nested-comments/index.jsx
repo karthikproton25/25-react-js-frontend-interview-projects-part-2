@@ -37,6 +37,15 @@ function NestedComments() {
         <br />
         <button>Add Comment</button>
       </div>
+      <ul>
+        {comments.map((comment) => (
+          <Comment
+            handleAddReply={handleAddReply}
+            key={comment.id}
+            comment={comment}
+          />
+        ))}
+      </ul>
     </div>
   );
 }
