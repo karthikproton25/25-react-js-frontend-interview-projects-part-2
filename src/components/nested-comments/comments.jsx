@@ -1,5 +1,5 @@
-function Comment({ comment }) {
-  return <div>comment</div>;
+function Comment({ comment, key }) {
+  return <li key={key}>{comment.title}</li>;
 }
 
 export default Comment;
