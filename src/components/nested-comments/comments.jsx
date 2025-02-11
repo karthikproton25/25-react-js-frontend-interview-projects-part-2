@@ -4,8 +4,21 @@ function Comment({ comment, key }) {
   return (
     <li key={key}>
       <span>{comment.title}</span>
-      {!showReplyCommentBox ? (
-        <button onClick={() => setShowReplyCommentBox(true)}>Add Reply</button>
+      {!showReplyCommentBox ? <button>Add Reply</button> : null}
+      {showReplyCommentBox ? (
+        <div>
+          <textarea
+            rows={"2"}
+            cols={"20"}
+            onChange={(event) => setReply(event.target.value)}
+            value={reply}
+          />
+          <br />
+          <div className="reply-buttons-container">
+            <button>Submit</button>
+            <button>Cancel</button>
+          </div>
+        </div>
       ) : null}
     </li>
   );
