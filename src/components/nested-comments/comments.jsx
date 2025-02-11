@@ -20,6 +20,17 @@ function Comment({ comment, key }) {
           </div>
         </div>
       ) : null}
+      {comment && comment.children && comment.children.length > 0 ? (
+        <ul>
+          {comment.children.map((childComment) => (
+            <Comment
+              handleAddReply={handleAddReply}
+              key={childComment.id}
+              comment={childComment}
+            />
+          ))}
+        </ul>
+      ) : null}
     </li>
   );
 }
