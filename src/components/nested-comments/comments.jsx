@@ -4,7 +4,9 @@ function Comment({ comment, key }) {
   return (
     <li key={key}>
       <span>{comment.title}</span>
-      {!showReplyCommentBox ? <button>Add Reply</button> : null}
+      {!showReplyCommentBox ? (
+        <button onClick={() => setShowReplyCommentBox(true)}>Add Reply</button>
+      ) : null}
       {showReplyCommentBox ? (
         <div>
           <textarea
