@@ -26,7 +26,14 @@ function Comment({ comment, key }) {
             >
               Submit
             </button>
-            <button>Cancel</button>
+            <button
+              onClick={() => {
+                setShowReplyCommentBox(false);
+                setReply("");
+              }}
+            >
+              Cancel
+            </button>
           </div>
         </div>
       ) : null}
