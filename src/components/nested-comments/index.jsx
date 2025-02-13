@@ -24,6 +24,15 @@ function NestedComments() {
       ],
     },
   ]);
+
+  function handleAddReply(getCurrentParentID, getCurrentReply) {
+    console.log(getCurrentReply, getCurrentParentID);
+
+    let updatedComments = [...comments];
+    handleAddNewComment(updatedComments, getCurrentParentID, getCurrentReply);
+    setComments(updatedComments);
+  }
+
   return (
     <div className="nested-comments-container">
       <h1>Nested Comments</h1>
