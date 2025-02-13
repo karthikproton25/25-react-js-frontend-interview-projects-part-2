@@ -50,6 +50,14 @@ function NestedComments() {
         comment.children.unshift(newComment(getCurrentReply));
       }
     }
+    for (let i = 0; i < updatedComments.length; i++) {
+      let comment = updatedComments[i];
+      handleAddNewComment(
+        comment.children,
+        getCurrentParentID,
+        getCurrentReply
+      );
+    }
   }
 
   return (
