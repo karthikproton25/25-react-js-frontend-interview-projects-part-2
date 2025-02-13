@@ -33,6 +33,19 @@ function NestedComments() {
     setComments(updatedComments);
   }
 
+  function handleAddNewComment(
+    updatedComments,
+    getCurrentParentID,
+    getCurrentReply
+  ) {
+    for (let i = 0; i < updatedComments.length; i++) {
+      let comment = updatedComments[i];
+      if (comment.id === getCurrentParentID) {
+        comment.children.unshift(newComment(getCurrentReply));
+      }
+    }
+  }
+
   return (
     <div className="nested-comments-container">
       <h1>Nested Comments</h1>
