@@ -32,7 +32,13 @@ function NestedComments() {
     handleAddNewComment(updatedComments, getCurrentParentID, getCurrentReply);
     setComments(updatedComments);
   }
-
+  function newComment(text) {
+    return {
+      id: new Date().getTime(),
+      title: text,
+      children: [],
+    };
+  }
   function handleAddNewComment(
     updatedComments,
     getCurrentParentID,
