@@ -17,7 +17,15 @@ function Comment({ comment, key }) {
           />
           <br />
           <div className="reply-buttons-container">
-            <button>Submit</button>
+            <button
+              onClick={() => {
+                handleAddReply(comment.id, reply);
+                setShowReplyCommentBox(false);
+                setReply("");
+              }}
+            >
+              Submit
+            </button>
             <button>Cancel</button>
           </div>
         </div>
