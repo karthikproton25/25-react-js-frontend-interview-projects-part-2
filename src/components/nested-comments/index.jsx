@@ -35,6 +35,7 @@ function NestedComments() {
     handleAddNewComment(updatedComments, getCurrentParentID, getCurrentReply);
     setComments(updatedComments);
   }
+
   function newComment(text) {
     return {
       id: new Date().getTime(),
@@ -42,6 +43,7 @@ function NestedComments() {
       children: [],
     };
   }
+
   function handleAddNewComment(
     updatedComments,
     getCurrentParentID,
@@ -53,6 +55,7 @@ function NestedComments() {
         comment.children.unshift(newComment(getCurrentReply));
       }
     }
+
     for (let i = 0; i < updatedComments.length; i++) {
       let comment = updatedComments[i];
       handleAddNewComment(
