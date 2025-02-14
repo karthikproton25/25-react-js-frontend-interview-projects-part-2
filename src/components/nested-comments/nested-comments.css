@@ -28,3 +28,9 @@
   margin-top: 20px;
   margin-bottom: 20px;
 }
+
+.nested-comments-container ul li span {
+  margin-right: 10px;
+  font-size: 16px;
+  font-weight: bold;
+}
