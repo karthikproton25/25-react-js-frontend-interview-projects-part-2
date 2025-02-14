@@ -9,3 +9,16 @@
   margin-top: 30px;
   margin-bottom: 30px;
 }
+
+.nested-comments-container .add-comment-btn {
+  padding: 12px 20px;
+  background-color: #f3f800;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.nested-comments-container ul {
+  margin-left: 20px;
+  list-style: none;
+}
