@@ -1,4 +1,7 @@
 import { useState } from "react";
+import Comment from "./comment";
+import "./nested-comments.css";
+
 function NestedComments() {
   const [inputValue, setInputValue] = useState("");
   const [comments, setComments] = useState([
