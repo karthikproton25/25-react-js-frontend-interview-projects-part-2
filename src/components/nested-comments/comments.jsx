@@ -1,9 +1,12 @@
-function Comment({ comment, key }) {
+import { useState } from "react";
+
+function Comment({ comment, key, handleAddReply }) {
   const [reply, setReply] = useState("");
   const [showReplyCommentBox, setShowReplyCommentBox] = useState(false);
+
   return (
     <li key={key}>
-      <span>{comment.title}</span>
+      <span> {comment.title}</span>
       {!showReplyCommentBox ? (
         <button onClick={() => setShowReplyCommentBox(true)}>Add Reply</button>
       ) : null}
