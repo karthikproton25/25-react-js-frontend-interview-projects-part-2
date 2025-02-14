@@ -71,7 +71,15 @@ function NestedComments() {
           value={inputValue}
         />
         <br />
-        <button>Add Comment</button>
+        <button
+          onClick={() => {
+            setComments([newComment(inputValue), ...comments]);
+            setInputValue("");
+          }}
+          className="add-comment-btn"
+        >
+          Add Comment
+        </button>
       </div>
       <ul>
         {comments.map((comment) => (
