@@ -60,6 +60,8 @@ function NestedComments() {
     }
   }
 
+  console.log(comments);
+
   return (
     <div className="nested-comments-container">
       <h1>Nested Comments</h1>
