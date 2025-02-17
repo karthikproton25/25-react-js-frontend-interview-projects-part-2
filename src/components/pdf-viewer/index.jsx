@@ -13,6 +13,10 @@ function PDFViewer() {
     }
   }
 
+  useEffect(() => {
+    fetchListOfProducts();
+  }, []);
+
   return <div>PDF Viewer</div>;
 }
 
