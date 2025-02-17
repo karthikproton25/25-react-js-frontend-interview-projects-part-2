@@ -23,7 +23,7 @@ function PDFViewer() {
 
     if (result) setProductDetails(result);
   }
-
+  console.log(productDetails);
   return (
     <div>
       <h1>PDF Viewer</h1>
