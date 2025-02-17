@@ -39,6 +39,11 @@ function PDFViewer() {
             ))
           : null}
       </ul>
+      <div className="pdf-viewer-page">
+        <PDFViewer style={{ width: "100%", height: "800px" }}>
+          <PdfViewComponent productDetails={productDetails} />
+        </PDFViewer>
+      </div>
     </div>
   );
 }
