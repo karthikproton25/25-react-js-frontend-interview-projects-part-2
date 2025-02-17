@@ -1,3 +1,14 @@
+import {
+  Document,
+  PDFDownloadLink,
+  PDFViewer,
+  Page,
+  Text,
+  View,
+} from "@react-pdf/renderer";
+import { useEffect, useState } from "react";
+import "./pdf.css";
+
 function PDFViewer() {
   const [products, setProducts] = useState([]);
   const [productDetails, setProductDetails] = useState(null);
