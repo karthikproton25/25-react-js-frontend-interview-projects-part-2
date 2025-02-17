@@ -17,7 +17,23 @@ function PDFViewer() {
     fetchListOfProducts();
   }, []);
 
-  return <div>PDF Viewer</div>;
+  return (
+    <div>
+      <h1>PDF Viewer</h1>
+      <ul>
+        {products && products.length > 0
+          ? products.map((productItem) => (
+              <li
+                onClick={() => handleFetchProductDetails(productItem.id)}
+                key={productItem.id}
+              >
+                {productItem.title}
+              </li>
+            ))
+          : null}
+      </ul>
+    </div>
+  );
 }
 
 export default PDFViewer;
