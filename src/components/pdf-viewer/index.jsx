@@ -43,6 +43,12 @@ function PDFViewer() {
         <PDFViewer style={{ width: "100%", height: "800px" }}>
           <PdfViewComponent productDetails={productDetails} />
         </PDFViewer>
+        <PDFDownloadLink
+          fileName="Product-Details.pdf"
+          document={<PdfViewComponent productDetails={productDetails} />}
+        >
+          <button>Download PDF</button>
+        </PDFDownloadLink>
       </div>
     </div>
   );
