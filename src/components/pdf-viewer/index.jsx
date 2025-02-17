@@ -17,6 +17,13 @@ function PDFViewer() {
     fetchListOfProducts();
   }, []);
 
+  async function handleFetchProductDetails(getId) {
+    const apiResponse = await fetch(`https://dummyjson.com/products/${getId}`);
+    const result = await apiResponse.json();
+
+    if (result) setProductDetails(result);
+  }
+
   return (
     <div>
       <h1>PDF Viewer</h1>
