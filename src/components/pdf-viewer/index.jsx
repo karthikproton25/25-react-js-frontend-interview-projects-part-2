@@ -9,6 +9,20 @@ import {
 import { useEffect, useState } from "react";
 import "./pdf.css";
 
+function PdfViewComponent({ productDetails }) {
+  return (
+    <Document>
+      <Page>
+        <View>
+          <Text>{productDetails?.title}</Text>
+          <Text>{productDetails?.description}</Text>
+          <Text>{productDetails?.category}</Text>
+        </View>
+      </Page>
+    </Document>
+  );
+}
+
 function PDFViewer() {
   const [products, setProducts] = useState([]);
   const [productDetails, setProductDetails] = useState(null);
