@@ -23,7 +23,7 @@ function PdfViewComponent({ productDetails }) {
   );
 }
 
-function PDFViewer() {
+function PdfViewer() {
   const [products, setProducts] = useState([]);
   const [productDetails, setProductDetails] = useState(null);
 
@@ -48,6 +48,7 @@ function PDFViewer() {
 
     if (result) setProductDetails(result);
   }
+
   console.log(productDetails);
   return (
     <div className="pdf-viewer-container">
@@ -68,15 +69,15 @@ function PDFViewer() {
         <PDFViewer style={{ width: "100%", height: "800px" }}>
           <PdfViewComponent productDetails={productDetails} />
         </PDFViewer>
-        <PDFDownloadLink
-          fileName="Product-Details.pdf"
-          document={<PdfViewComponent productDetails={productDetails} />}
-        >
-          <button>Download PDF</button>
-        </PDFDownloadLink>
       </div>
+      <PDFDownloadLink
+        fileName="Product-Details.pdf"
+        document={<PdfViewComponent productDetails={productDetails} />}
+      >
+        <button>Download PDF</button>
+      </PDFDownloadLink>
     </div>
   );
 }
 
-export default PDFViewer;
+export default PdfViewer;
