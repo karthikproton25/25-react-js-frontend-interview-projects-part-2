@@ -50,7 +50,7 @@ function PDFViewer() {
   }
   console.log(productDetails);
   return (
-    <div>
+    <div className="pdf-viewer-container">
       <h1>PDF Viewer</h1>
       <ul>
         {products && products.length > 0
