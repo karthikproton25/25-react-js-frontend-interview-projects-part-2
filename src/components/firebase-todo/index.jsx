@@ -12,6 +12,8 @@ function FirebaseTodo() {
           label="Create Todo"
           variant="outlined"
           size="small"
+          value={inputValue}
+          onChange={(event) => setInputValue(event.target.value)}
         />
       </form>
     </div>
