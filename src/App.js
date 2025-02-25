@@ -16,6 +16,7 @@ import FormValidation from "./components/15. simple-form-validation";
 import FileUpload from "./components/16. file-upload";
 import Quiz from "./components/17. quiz-app";
 import PdfViewer from "./components/19. pdf-viewer";
+import FirebaseTodo from "./components/20. firebase-todo";
 
 import "./App.css";
 import PDFViewer from "./components/pdf-viewer";
@@ -41,7 +42,8 @@ function App() {
       <FormValidation />
       <FileUpload />
       <Quiz />
-      <PDFViewer />
+      <PdfViewer />
+      <FirebaseTodo />
     </div>
   );
 }

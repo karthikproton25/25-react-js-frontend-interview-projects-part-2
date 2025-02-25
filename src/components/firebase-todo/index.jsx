@@ -1,6 +1,6 @@
 function FirebaseTodo() {
   return (
-    <div>
+    <div className="firebase-todo-wrappper">
       <h1>Firebase Todo Application</h1>
     </div>
   );
