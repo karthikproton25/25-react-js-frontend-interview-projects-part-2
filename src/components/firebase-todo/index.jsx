@@ -1,7 +1,21 @@
 import { Button, TextField } from "@mui/material";
+import { useState } from "react";
+import {} from "firebase/firestore";
 
 function FirebaseTodo() {
   const [inputValue, setInputValue] = useState("");
+
+  function handleAddTodo(event) {
+    event.preventDefault();
+    
+      : addDoc(collection(db, "todos"), {
+          todo: inputValue,
+          timestamp: serverTimestamp(),
+        });
+
+    setInputValue("");
+    
+  }
 
   return (
     <div className="firebase-todo-wrappper">
