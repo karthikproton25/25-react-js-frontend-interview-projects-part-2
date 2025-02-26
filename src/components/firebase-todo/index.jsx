@@ -1,11 +1,24 @@
 import { Button, TextField } from "@mui/material";
 import { useState } from "react";
-import {} from "firebase/firestore";
+import { db } from "firebase/firestore";
+
+const q = query(collection(db, "todos"), orderBy("timestamp", "desc"));
 
 function FirebaseTodo() {
   const [inputValue, setInputValue] = useState("");
+  const [todos, setTodos] = useState([]);
+  useEffect(() => {
+    onSnapshot(q, (snapShot) => {
+      setTodos(
+        snapShot.docs.map((docItem) => ({
+          id: docItem.id,
+          todoItem: docItem.data(),
+        }))
+      );
+    });
+  }, [inputValue]);
 
-  function handleAddTodo(event) {
+function handleAddTodo(event) {
     event.preventDefault();
     
       : addDoc(collection(db, "todos"), {
