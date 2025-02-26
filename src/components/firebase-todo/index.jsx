@@ -46,6 +46,20 @@ function handleAddTodo(event) {
           {currentEditedTodoID !== null ? "Edit Todo" : "Add Todo"}
         </Button>
       </form>
+      <ul>
+        {todos && todos.length > 0 ? (
+          todos.map((todoItem) => (
+            <Todo
+              setInputValue={setInputValue}
+              setCurrentEditedTodoID={setCurrentEditedTodoID}
+              todoItem={todoItem}
+              authInfo={authInfo}
+            />
+          ))
+        ) : (
+          <h3>No todos available ! Please add one</h3>
+        )}
+      </ul>
     </div>
   );
 }
