@@ -15,6 +15,9 @@ function FirebaseTodo() {
           value={inputValue}
           onChange={(event) => setInputValue(event.target.value)}
         />
+        <Button type="submit" variant="contained" color="primary">
+          {currentEditedTodoID !== null ? "Edit Todo" : "Add Todo"}
+        </Button>
       </form>
     </div>
   );
