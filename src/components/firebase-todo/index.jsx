@@ -9,7 +9,6 @@ function FirebaseTodo() {
   const [todos, setTodos] = useState([]);
   const [currentEditedTodoID, setCurrentEditedTodoID] = useState(null);
 
-  
   useEffect(() => {
     onSnapshot(q, (snapShot) => {
       setTodos(
@@ -21,16 +20,18 @@ function FirebaseTodo() {
     });
   }, [inputValue]);
 
-function handleAddTodo(event) {
+  function handleAddOrEditTodo(event) {
     event.preventDefault();
-    
+    currentEditedTodoID !== null
+      ? updateDoc(doc(db, "todos", currentEditedTodoID), {
+          todo: inputValue,
+        })
       : addDoc(collection(db, "todos"), {
           todo: inputValue,
           timestamp: serverTimestamp(),
         });
 
     setInputValue("");
-    
   }
 
   return (
