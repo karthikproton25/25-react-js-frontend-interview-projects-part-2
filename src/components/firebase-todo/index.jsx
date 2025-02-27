@@ -32,6 +32,7 @@ function FirebaseTodo() {
         });
 
     setInputValue("");
+    setCurrentEditedTodoID(null);
   }
 
   return (
