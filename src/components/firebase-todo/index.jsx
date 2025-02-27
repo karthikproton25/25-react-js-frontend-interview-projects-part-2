@@ -7,6 +7,9 @@ const q = query(collection(db, "todos"), orderBy("timestamp", "desc"));
 function FirebaseTodo() {
   const [inputValue, setInputValue] = useState("");
   const [todos, setTodos] = useState([]);
+  const [currentEditedTodoID, setCurrentEditedTodoID] = useState(null);
+
+  
   useEffect(() => {
     onSnapshot(q, (snapShot) => {
       setTodos(
