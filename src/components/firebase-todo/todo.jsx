@@ -16,6 +16,16 @@ function Todo({ todoItem }) {
       >
         Delete
       </Button>
+      <Button
+        onClick={() => {
+          setInputValue(todoItem.todoItem.todo);
+          setCurrentEditedTodoID(todoItem.id);
+        }}
+        variant="contained"
+        color="info"
+      >
+        Edit
+      </Button>
     </List>
   );
 }
