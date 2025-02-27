@@ -1,4 +1,4 @@
-import { List } from "@mui/material";
+import { Button, List, ListItem, ListItemText } from "@mui/material";
 
 function Todo({ todoItem }) {
   return (
@@ -6,6 +6,13 @@ function Todo({ todoItem }) {
       <ListItem>
         <ListItemText primary={todoItem?.todoItem?.todo} />
       </ListItem>
+      <Button
+        onClick={() => handleDelete(todoItem.id)}
+        variant="contained"
+        color="secondary"
+      >
+        Delete
+      </Button>
     </List>
   );
 }
