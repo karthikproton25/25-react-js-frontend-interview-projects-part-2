@@ -1,6 +1,9 @@
 import { Button, List, ListItem, ListItemText } from "@mui/material";
 
 function Todo({ todoItem }) {
+  function handleDelete(getCurrentTodoID) {
+    deleteDoc(doc(db, "todos", getCurrentTodoID));
+  }
   return (
     <List>
       <ListItem>
