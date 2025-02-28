@@ -1,10 +1,22 @@
 import { Button, TextField } from "@mui/material";
-import { useState } from "react";
-import { db } from "firebase/firestore";
+import { useEffect, useState } from "react";
+import {
+  addDoc,
+  collection,
+  doc,
+  onSnapshot,
+  orderBy,
+  query,
+  serverTimestamp,
+  updateDoc,
+} from "firebase/firestore";
+import { db } from "../../firebase-config";
+import Todo from "./todo";
+import "./todo.css";
 
 const q = query(collection(db, "todos"), orderBy("timestamp", "desc"));
 
-function FirebaseTodo() {
+function FirebaseTodo({ authInfo = null }) {
   const [inputValue, setInputValue] = useState("");
   const [todos, setTodos] = useState([]);
   const [currentEditedTodoID, setCurrentEditedTodoID] = useState(null);
@@ -35,10 +47,12 @@ function FirebaseTodo() {
     setCurrentEditedTodoID(null);
   }
 
+  console.log(todos, "sangam");
+
   return (
-    <div className="firebase-todo-wrappper">
+    <div className="firebase-todo-wrapper">
       <h1>Firebase Todo Application</h1>
-      <form>
+      <form onSubmit={handleAddOrEditTodo}>
         <TextField
           id="todo"
           label="Create Todo"
