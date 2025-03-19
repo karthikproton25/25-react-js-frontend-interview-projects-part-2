@@ -6,4 +6,4 @@ function FirebaseAuth() {
   );
 }
 
-export default FirebaseAuth();
+export default FirebaseAuth;
