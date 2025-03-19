@@ -1,4 +1,4 @@
-funtion UnauthPage {
+function UnauthPage {
     return (
         <div>
             <div>
