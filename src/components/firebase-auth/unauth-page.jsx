@@ -1,9 +1,10 @@
 function UnauthPage {
+    const [isLoginView, setIsLoginView] = useState(false);
     return (
         <div className="unauth-page-wrapper">
             <div className="unauth-tab-view-container">
-                <button>Register View</button>
-                <button>Login View</button>
+            <button onClick={() => setIsLoginView(false)}>Register View</button>
+            <button onClick={() => setIsLoginView(true)}>Login View</button>
             </div>
         </div>
     )
