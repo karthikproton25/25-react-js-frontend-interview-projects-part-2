@@ -1,5 +1,6 @@
 import {initializeApp} from firebaseConfig/app;
 import { getFirestore } from "firebase/firestore";
+import { getAuth } from "firebase/auth";
 
 const firebaseConfig = {
   apiKey: "AIzaSyDenjytWyiE6vUIOP2gWSSprC0_yTbuB0c",
@@ -13,3 +14,12 @@ const firebaseConfig = {
 
 const firebaseapp = initializeApp(firebaseConfig);
 export const db = getFirestore(firebaseApp);
+const auth = getAuth(firebaseApp);
+
+async function loginUsingEmailAndPassword(email, password) {
+  try {
+    await signInWithEmailAndPassword(auth, email, password);
+  } catch (error) {
+    console.log(error);
+  }
+}
