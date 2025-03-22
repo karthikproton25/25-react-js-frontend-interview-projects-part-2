@@ -23,3 +23,23 @@ async function loginUsingEmailAndPassword(email, password) {
     console.log(error);
   }
 }
+
+async function registerUsingEmailAndPassword(name, email, password) {
+  try {
+    const response = await createUserWithEmailAndPassword(
+      auth,
+      email,
+      password
+    );
+    const user = response.user;
+
+    await addDoc(collection(db, "users"), {
+      uid: user.uid,
+      name,
+      authProvider: "local",
+      email,
+    });
+  } catch (error) {
+    console.log(error);
+  }
+}
