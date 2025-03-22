@@ -47,3 +47,10 @@ async function registerUsingEmailAndPassword(name, email, password) {
 function logout() {
   signOut(auth);
 }
+
+export {
+  auth,
+  loginUsingEmailAndPassword,
+  logout,
+  registerUsingEmailAndPassword,
+};
