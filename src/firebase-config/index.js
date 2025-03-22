@@ -43,3 +43,7 @@ async function registerUsingEmailAndPassword(name, email, password) {
     console.log(error);
   }
 }
+
+function logout() {
+  signOut(auth);
+}
