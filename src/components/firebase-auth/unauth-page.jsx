@@ -83,6 +83,8 @@ function UnauthPage {
       });
       const [user, loading, error] = useAuthState(auth)
 
+      console.log(registerFormData);
+      
     return (
         <div className="unauth-page-wrapper">
             <div className="unauth-tab-view-container">
