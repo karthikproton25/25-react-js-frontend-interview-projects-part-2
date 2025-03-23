@@ -3,23 +3,63 @@ import { auth, loginUsingEmailAndPassword, registerUsingEmailAndPassword } from 
 import { useAuthState } from "react-firebase-hooks/auth";
 import FirebaseTodo from "../firebase-todo";
 
-function Registration(){
-return <div className="register">
-    <div className="input-wrapper">
-        <label htmlFor="name">Full Name:</label>
-        <input type="text" id="name" name="name" placeholder="Enter your full name" />
-    </div>
-    <div className="input-wrapper">
-        <label htmlFor="email">Email:</label>
-        <input type="email" name="name" id="email" placeholder="Enter your email" />
-    </div>
-    <div className="input-wrapper">
-        <label htmlFor="password">Password:</label>
-        <input type="password" name="password" id="password" placeholder="Enter your password" />
-    </div>
-    <button>Register</button>
-</div>;
-}
+
+function Registration({ formData, setFormData, handleRegister }) {
+    return (
+      <div className="register">
+        <div className="input-wrapper">
+          <label htmlFor="name">Full Name:</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            value={formData.name}
+            placeholder="Enter your full name"
+            onChange={(event) =>
+              setFormData({
+                ...formData,
+                name: event.target.value,
+              })
+            }
+          />
+        </div>
+        <div className="input-wrapper">
+          <label htmlFor="email">Email:</label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Enter your email"
+            value={formData.email}
+            onChange={(event) =>
+              setFormData({
+                ...formData,
+                email: event.target.value,
+              })
+            }
+          />
+        </div>
+  
+        <div className="input-wrapper">
+          <label htmlFor="password">Password:</label>
+          <input
+            type="password"
+            name="password"
+            id="password"
+            placeholder="Enter your Password"
+            onChange={(event) =>
+              setFormData({
+                ...formData,
+                password: event.target.value,
+              })
+            }
+            value={formData.password}
+          />
+        </div>
+        <button onClick={handleRegister}>Register</button>
+      </div>
+    );
+  }
 
 function Login(){
 return <div className="login">
