@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { auth, loginUsingEmailAndPassword, registerUsingEmailAndPassword } from "../../firebase-config";
 import { useAuthState } from "react-firebase-hooks/auth";
-import FirebaseTodo from "../firebase-todo";
+
 
 
 function Registration({ formData, setFormData, handleRegister }) {
@@ -84,7 +84,7 @@ function UnauthPage {
       const [user, loading, error] = useAuthState(auth)
 
       console.log(registerFormData);
-      
+
     return (
         <div className="unauth-page-wrapper">
             <div className="unauth-tab-view-container">
