@@ -49,9 +49,19 @@ function UnauthPage {
             <button onClick={() => setIsLoginView(false)}>Register View</button>
             <button onClick={() => setIsLoginView(true)}>Login View</button>
             </div>
-            {
-                isLoginView ? <Login/> : <Registration/>
-            }
+            {isLoginView ? (
+        <Login
+          formData={loginFormData}
+          setFormData={setLoginFormData}
+          handleLogin={handleLogin}
+        />
+      ) : (
+        <Registration
+          formData={registerFormData}
+          setFormData={setRegisterFormData}
+          handleRegister={handleRegister}
+        />
+      )}
         </div>
     )
 }
