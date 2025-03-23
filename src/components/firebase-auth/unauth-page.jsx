@@ -37,6 +37,12 @@ function UnauthPage {
         email: "",
         password: "",
       });
+      const [loginFormData, setLoginFormData] = useState({
+        email: "",
+        password: "",
+      });
+      const [user, loading, error] = useAuthState(auth)
+
     return (
         <div className="unauth-page-wrapper">
             <div className="unauth-tab-view-container">
