@@ -105,6 +105,11 @@ function UnauthPage {
         registerUsingEmailAndPassword(name, email, password);
       }
 
+      function handleLogin() {
+        const { email, password } = loginFormData;
+        loginUsingEmailAndPassword(email, password);
+      }
+      
     return (
         <div className="unauth-page-wrapper">
             <div className="unauth-tab-view-container">
