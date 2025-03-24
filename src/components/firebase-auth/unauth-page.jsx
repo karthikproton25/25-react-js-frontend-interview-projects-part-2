@@ -85,6 +85,11 @@ function UnauthPage {
 
       console.log(registerFormData);
 
+      function handleRegister() {
+        const { name, email, password } = registerFormData;
+        registerUsingEmailAndPassword(name, email, password);
+      }
+      
     return (
         <div className="unauth-page-wrapper">
             <div className="unauth-tab-view-container">
