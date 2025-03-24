@@ -61,13 +61,28 @@ function Registration({ formData, setFormData, handleRegister }) {
     );
   }
 
-function Login(){
-return <div className="login">
-    <input />
-    <input />
-    <button>Login</button>
-</div>;
-}
+  function Login({ formData, setFormData, handleLogin }) {
+    return (
+      <div className="login">
+        <div className="input-wrapper">
+          <label htmlFor="email">Email:</label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Enter your email"
+            value={formData.email}
+            onChange={(event) =>
+              setFormData({
+                ...formData,
+                email: event.target.value,
+              })
+            }
+          />
+        </div>
+        </div>
+    );
+  }
 
 
 function UnauthPage {
@@ -89,7 +104,7 @@ function UnauthPage {
         const { name, email, password } = registerFormData;
         registerUsingEmailAndPassword(name, email, password);
       }
-      
+
     return (
         <div className="unauth-page-wrapper">
             <div className="unauth-tab-view-container">
