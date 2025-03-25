@@ -4,6 +4,7 @@ import { auth, db, logout } from "../../firebase-config";
 
 function AuthPage {
     const [user, loading, error] = useAuthState(auth);
+    const [userInfo, setUserInfo] = useState(null);
     
     async function fetchUserDetails() {
         try {
@@ -24,6 +25,12 @@ function AuthPage {
     return (
         <div>
             <h1>Auth Page</h1>
+            {userInfo ? (
+        <div>
+          <p>User Name: {userInfo?.name}</p>
+          <p>User Email: {userInfo?.email}</p>
+        </div>
+      ) : null}
         <button onClick={logout}>Logout</button>
         </div>
     )
