@@ -31,7 +31,9 @@ function AuthPage {
           <p>User Email: {userInfo?.email}</p>
         </div>
       ) : null}
+      <FirebaseTodo authInfo={user} />
         <button onClick={logout}>Logout</button>
+        
         </div>
     )
 }
