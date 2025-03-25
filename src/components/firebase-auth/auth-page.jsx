@@ -3,6 +3,12 @@ import { auth, db, logout } from "../../firebase-config";
 
 
 function AuthPage {
+    const [user, loading, error] = useAuthState(auth);
+
+    useEffect(() => {
+        if (user) fetchUserDetails();
+      }, [user, loading]);
+
     return (
         <div>
             <h1>Auth Page</h1>
