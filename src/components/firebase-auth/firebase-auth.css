@@ -20,3 +20,12 @@
   color: #000;
   margin-top: 10px;
 }
+
+.firebase-auth-container .input-wrapper {
+  display: flex;
+  gap: 20px;
+}
+
+.firebase-auth-container .input-wrapper input {
+  margin-bottom: 20px;
+}
