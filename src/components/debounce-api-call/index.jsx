@@ -41,6 +41,14 @@ function DebounceApiCall() {
           placeholder="Enter Recipe Name"
         />
       </div>
+      {pending ? <h3>Pending ! Please wait</h3> : null}
+      <ul>
+        {recipes && recipes.length > 0 ? (
+          recipes.map((recipeItem) => <li>{recipeItem.name}</li>)
+        ) : (
+          <h3>No Recipes found ! Please try with different search</h3>
+        )}
+      </ul>
     </div>
   );
 }
