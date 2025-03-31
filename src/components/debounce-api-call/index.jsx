@@ -1,3 +1,5 @@
+import { useEffect, useState } from "react";
+
 function DebounceApiCall() {
   const [searchParam, setSearchParam] = useState("");
   return (
@@ -8,6 +10,7 @@ function DebounceApiCall() {
           type="text"
           value={searchparams}
           onChange={(event) => setSearchParam(event.target.value)}
+          placeholder="Enter Recipe Name"
         />
       </div>
     </div>
