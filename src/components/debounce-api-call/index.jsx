@@ -6,6 +6,27 @@ function DebounceApiCall() {
   const [pending, setPending] = useState(false);
   const debounceParamValue = useDebounce(searchParam, 1000);
 
+  async function fetchListOfRecipes() {
+    try {
+      setPending(true);
+      const apiResponse = await fetch(
+        `https://dummyjson.com/recipes/search?q=${debounceParamValue}`
+      );
+      const result = await apiResponse.json();
+
+      if (result && result.recipes && result.recipes.length > 0) {
+        setPending(false);
+        setRecipes(result.recipes);
+      } else {
+        setPending(false);
+        setRecipes([]);
+      }
+    } catch (error) {
+      console.log(error);
+      setPending(false);
+    }
+  }
+
   useEffect(() => {
     fetchListOfRecipes();
   }, [debounceParamValue]);
