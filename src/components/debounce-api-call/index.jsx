@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 
 function DebounceApiCall() {
   const [searchParam, setSearchParam] = useState("");
+  const debounceParamValue = useDebounce(searchParam, 1000);
   return (
     <div>
       <h1>Debounce API Call</h1>
