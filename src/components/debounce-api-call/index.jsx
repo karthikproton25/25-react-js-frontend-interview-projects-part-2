@@ -2,7 +2,13 @@ import { useEffect, useState } from "react";
 
 function DebounceApiCall() {
   const [searchParam, setSearchParam] = useState("");
+  const [recipes, setRecipes] = useState([]);
+  const [pending, setPending] = useState(false);
   const debounceParamValue = useDebounce(searchParam, 1000);
+
+  useEffect(() => {
+    fetchListOfRecipes();
+  }, [debounceParamValue]);
   return (
     <div>
       <h1>Debounce API Call</h1>
