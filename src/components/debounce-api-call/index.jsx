@@ -1,4 +1,6 @@
 import { useEffect, useState } from "react";
+import useDebounce from "./use-debounce";
+import "./debounce.css";
 
 function DebounceApiCall() {
   const [searchParam, setSearchParam] = useState("");
@@ -31,7 +33,7 @@ function DebounceApiCall() {
     fetchListOfRecipes();
   }, [debounceParamValue]);
   return (
-    <div>
+    <div className="debounce-container">
       <h1>Debounce API Call</h1>
       <div className="search-wrapper">
         <input
