@@ -17,3 +17,17 @@
   border: 1.5px solid #ccc;
   margin-bottom: 20px;
 }
+
+.debounce-container ul {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  align-items: center;
+  gap: 25px;
+}
+
+.debounce-container ul li {
+  padding: 10px;
+  background-color: #f3f800;
+  border: 1px solid #000;
+}
