@@ -8,3 +8,12 @@
   margin-top: 30px;
   margin-bottom: 30px;
 }
+
+.debounce-container input {
+  padding: 10px 20px;
+  outline: none;
+  font-size: 20px;
+  border-radius: 8px;
+  border: 1.5px solid #ccc;
+  margin-bottom: 20px;
+}
